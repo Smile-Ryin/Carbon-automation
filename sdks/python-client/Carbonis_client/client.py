@@ -3,8 +3,8 @@ import json
 import requests
 
 
-class DifyClient:
-    def __init__(self, api_key, base_url: str = "https://api.dify.ai/v1"):
+class CarbonisClient:
+    def __init__(self, api_key, base_url: str = "https://api.carbonis.ai/v1"):
         self.api_key = api_key
         self.base_url = base_url
 
@@ -54,7 +54,7 @@ class DifyClient:
         return self._send_request("GET", "/meta", params=params)
 
 
-class CompletionClient(DifyClient):
+class CompletionClient(CarbonisClient):
     def create_completion_message(self, inputs, response_mode, user, files=None):
         data = {
             "inputs": inputs,
@@ -70,7 +70,7 @@ class CompletionClient(DifyClient):
         )
 
 
-class ChatClient(DifyClient):
+class ChatClient(CarbonisClient):
     def create_chat_message(
         self,
         inputs,
@@ -143,7 +143,7 @@ class ChatClient(DifyClient):
         return self._send_request_with_files("POST", "/audio-to-text", data, files)
 
 
-class WorkflowClient(DifyClient):
+class WorkflowClient(CarbonisClient):
     def run(
         self, inputs: dict, response_mode: str = "streaming", user: str = "abc-123"
     ):
@@ -158,19 +158,19 @@ class WorkflowClient(DifyClient):
         return self._send_request("GET", f"/workflows/run/{workflow_run_id}")
 
 
-class KnowledgeBaseClient(DifyClient):
+class KnowledgeBaseClient(CarbonisClient):
     def __init__(
         self,
         api_key,
-        base_url: str = "https://api.dify.ai/v1",
+        base_url: str = "https://api.carbonis.ai/v1",
         dataset_id: str | None = None,
     ):
         """
         Construct a KnowledgeBaseClient object.
 
         Args:
-            api_key (str): API key of Dify.
-            base_url (str, optional): Base URL of Dify API. Defaults to 'https://api.dify.ai/v1'.
+            api_key (str): API key of Carbonis.
+            base_url (str, optional): Base URL of Carbonis API. Defaults to 'https://api.carbonis.ai/v1'.
             dataset_id (str, optional): ID of the dataset. Defaults to None. You don't need this if you just want to
                 create a new dataset. or list datasets. otherwise you need to set this.
         """

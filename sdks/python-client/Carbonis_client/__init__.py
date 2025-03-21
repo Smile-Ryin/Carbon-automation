@@ -1,1 +1,1 @@
-from dify_client.client import ChatClient, CompletionClient, DifyClient
+from Carbonis_client.client import ChatClient, CompletionClient, CarbonisClient
