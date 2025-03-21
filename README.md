@@ -10,7 +10,7 @@
 
 
 **2. 模型支持**: 
-  训练并微调DeepSeek-7B模型，以进行碳管理和系统调控。
+  训练并微调DeepSeek-R1-Distill-Qwen-1.5B模型，以进行碳管理和系统调控。
 
 
 **3. RAG Pipeline**: 
