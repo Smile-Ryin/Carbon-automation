@@ -1,36 +1,29 @@
 # Carbonis
 
-## 这是一个用于挑战杯项目的代码框架
+## 这是一个挑战杯项目：Corbonis零碳——基自动化碳报告生成系统
 
-
-本模型是一个开源的 LLM 应用开发平台。其直观的界面结合了 AI 工作流、RAG 管道、Agent、模型管理、可观测性功能等，让您可以快速从原型到生产。以下是其核心功能列表：
+该系统创新性地融合了区块链、LLM、Agent和RAG技术，致力于解决当前碳核算的不精确性、数据隐私保护难题，以及国家在企业碳核算与报告提交方面缺乏统一标准的痛点。通过智能化手段，本项目能够帮助企业高效完成数字化碳管理，优化碳排放数据的存证、核算、审核及报告生成过程，确保数据的真实性、可追溯性和标准化，助力企业高效完成碳管理，为“双碳”目标的实现提供有力技术支撑。以下是其核心功能列表：
 </br> </br>
 
-**1. 工作流**: 
-  在画布上构建和测试功能强大的 AI 工作流程，利用以下所有功能以及更多功能。
-
+**1. 数据收集**: 
+  设置多源接口，允许从服务器传输数据。
 
 
 **2. 模型支持**: 
-  与数百种专有/开源 LLMs 以及数十种推理提供商和自托管解决方案无缝集成，涵盖 GPT、Mistral、Llama3 以及任何与 OpenAI API 兼容的模型。
-
-![providers-v5](图片)
+  训练并微调DeepSeek-7B模型，以进行碳管理和系统调控。
 
 
-**3. Prompt IDE**: 
-  用于制作提示、比较模型性能以及向基于聊天的应用程序添加其他功能（如文本转语音）的直观界面。
-
-**4. RAG Pipeline**: 
+**3. RAG Pipeline**: 
   广泛的 RAG 功能，涵盖从文档摄入到检索的所有内容，支持从 PDF、PPT 和其他常见文档格式中提取文本的开箱即用的支持。
 
-**5. Agent 智能体**: 
-  您可以基于 LLM 函数调用或 ReAct 定义 Agent，并为 Agent 添加预构建或自定义工具。本模型为 AI Agent 提供了50多种内置工具，如谷歌搜索、DALL·E、Stable Diffusion 和 WolframAlpha 等。
+**4. Agent 智能体**: 
+  基于 LLM 函数调用或 ReAct 定义 Agent，并为 Agent 添加预构建或自定义工具。本模型为 企业设置了多种 Agent 。
 
-**6. LLMOps**: 
+**5. LLMOps**: 
   随时间监视和分析应用程序日志和性能。您可以根据生产数据和标注持续改进提示、数据集和模型。
 
-**7. 后端即服务**: 
-  所有 Carbonis 的功能都带有相应的 API，因此您可以轻松地将 Carbonis 集成到自己的业务逻辑中。
+**6. 后端即服务**: 
+  预计 Carbonis 的功能都将带有相应的 API，到时您可以轻松地将 Carbonis 集成到自己的业务逻辑中。
 
 ### 验证依赖项
 
@@ -40,7 +33,7 @@
 - [pnpm](https://pnpm.io/)
 - [Python](https://www.python.org/) version 3.11.x or 3.12.x
 
-### 后端
+### 后端（未完成）
 
 Carbonis 的后端使用 Python 编写，使用 [Flask](https://flask.palletsprojects.com/en/3.0.x/) 框架。它使用 [SQLAlchemy](https://www.sqlalchemy.org/) 作为 ORM，使用 [Celery](https://docs.celeryq.dev/en/stable/getting-started/introduction.html) 作为任务队列。授权逻辑通过 Flask-login 进行处理。
 
@@ -60,7 +53,7 @@ Carbonis 的后端使用 Python 编写，使用 [Flask](https://flask.palletspro
 └── tests
 ```
 
-### 前端
+### 前端（部分完成）
 
 该网站使用基于 Typescript 的 [Next.js](https://nextjs.org/) 模板进行引导，并使用 [Tailwind CSS](https://tailwindcss.com/) 进行样式设计。[React-i18next](https://react.i18next.com/) 用于国际化。
 
