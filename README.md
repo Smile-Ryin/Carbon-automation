@@ -82,3 +82,4 @@ Carbonis 的后端使用 Python 编写，使用 [Flask](https://flask.palletspro
 ├── types                 // 函数参数和返回值的描述
 └── utils                 // 共享的实用函数
 ```
+### model部分训练文件过大，没有上传
